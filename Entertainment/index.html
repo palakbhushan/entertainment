@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+    <script src="https://kit.fontawesome.com/94d8cc078f.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body> 
+        <div class="overlay">
+        <h1 class="siteTitle" data-text="Entertainment">
+            <span><i class="far fa-hand-rock"></i></span>
+            Entertainment <span><i class="fas fa-gamepad"></i></span> Zone
+            <span><i class="far fa-hand-rock"></i></span></h1>
+        </div>
+        <div class="loginCard">
+            <h2 class="cardtitle">
+                G<span><i class="fas fa-broadcast-tower"></i></span>mmer L<span><i class="fas fa-fire-alt"></i></span>gin
+            </h2>
+
+            <form id="loginForm">
+
+                <div  class="input">
+                    <input id="email" type="email" placeholder="Gammer name">
+                </div>
+                <div class="input">
+                    <input id="password" type="password" placeholder="password">
+                </div>
+                <div class="input blk">
+                    <button id="submit">submit</button>
+                 
+                </div>
+                <div class="input blk">
+                    <button id="login">login</button>
+                 
+                </div>
+                <p>Forgot Password <a href="#">Click here<i class="fas fa-headset"></i></a></p>
+            </form>
+
+
+        </div>
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
+            
+            import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyBg864WxoC8AJfrCdAt3daxDnGoxwOZefQ",
+              authDomain: "entertainment-86b48.firebaseapp.com",
+              projectId: "entertainment-86b48",
+              storageBucket: "entertainment-86b48.appspot.com",
+              messagingSenderId: "431501497252",
+              appId: "1:431501497252:web:daf23107cda83544762731"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+
+            document.getElementById("submit").addEventListener('click' , function(){
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+
+            createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+                console.log("created")
+                if(user){
+                    location.replace("index.html")
+                }
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                console.log(errorCode + errorMessage)
+            });
+         })
+
+
+         document.getElementById("login").addEventListener('click' , function(){
+            const email1 = document.getElementById("email").value
+            const password1 = document.getElementById("password").value
+
+            signInWithEmailAndPassword(auth, email1, password1)
+            .then((userCredential) => {
+                // Signed in 
+                console.log("loggedin")
+                const user = userCredential.user;
+                if(user){
+                    location.replace("home.html")
+                }
+                
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode + errorMessage)
+            });
+         })
+
+        </script>
+
+        <script src="index.js" async></script>
+</body>
+</html>

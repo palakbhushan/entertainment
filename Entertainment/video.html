@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video zone</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon3/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon3/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon3/favicon-16x16.png">
+    <link rel="manifest" href="favicon3/site.webmanifest">
+    <link rel="mask-icon" href="favicon3/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="video.css">
+
+    <script src="https://kit.fontawesome.com/94d8cc078f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="overlay">
+        <h1 class="siteTitle" data-text="video zone"><span><i class="fas fa-step-forward"></i> Welcome To 
+        </span> Vide<span><i class="far fa-play-circle icon"></i></span> Zone <span><i class="fas fa-step-backward"></i></span></h1>
+    </div>
+
+    <div class="container">
+        <div class="videos">
+            <video class="active" src="./video/1.mp4"  ></video>
+            <video src="./video/2.mp4"  ></video>
+            <video src="./video/3.mp4"  ></video>
+            <video src="./video/3.mp4"  ></video>
+        </div>
+
+        <div class="play-videos">
+            <video src="./video/1.mp4" controls muted></video>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('.videos video').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+
+                let src = $(this).attr('src')
+                $('.play-videos video').attr('src',src)
+            });
+            
+        });
+    </script>
+</body>
+</html>

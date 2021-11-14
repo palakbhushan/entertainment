@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon1/favicon-16x16.png">
+    <link rel="manifest" href="favicon1/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="nav-item " onmouseover="toggleMenu(0)" onmouseout="toggleMenu(0)"> 
+            <i class="fas fa-grin-squint icon"></i>
+            <span class="text"> <a href="meme.html" >Meme zone</a></span>
+        </div>
+
+        <div class="nav-item" onmouseover="toggleMenu(1)" onmouseout="toggleMenu(1)">
+            <i class="fas fa-dragon icon"></i>
+            <span class="text"> <a href="https://saveyourqueen.web.app" >Game zone</a></span>
+        </div>
+
+        <div class="nav-item" onmouseover="toggleMenu(2)" onmouseout="toggleMenu(2)">
+            <i class="fas fa-play-circle icon"></i>
+            <span class="text"> <a href="video.html" >Video zone</a></span>
+        </div>
+
+        <div class="nav-item" onmouseover="toggleMenu(3)" onmouseout="toggleMenu(3)">
+            <i class="fas fa-music icon"></i>
+            <span class="text"> <a href="https://www.linkedin.com/in/palakbhushan/" >Music zone</a></span>
+        </div>
+
+        <div class="nav-item" onmouseover="toggleMenu(4)" onmouseout="toggleMenu(4)">
+            <i class="fab fa-linkedin-in icon"></i>
+            <span class="text"><a href="https://www.linkedin.com/in/palakbhushan/">Contact us</a></span>
+        </div>
+
+        <div class="nav-item" onmouseover="toggleMenu(5)" onmouseout="toggleMenu(5)">
+            <i class="fas fa-sign-out-alt icon"></i>
+            <span class="text"><a href="index.html" target="_self">Sign out</a></span>
+        </div>
+
+
+
+        <div class="nav-item user-info" onmouseover="toggleMenu(6)" onmouseout="toggleMenu(6)">
+            <i class="far fa-user icon" ></i>
+            <span class="text" id="user-name"><a href="#">User</a></span>
+        </div>
+
+
+        <i class="fas fa-sign-out-alt"></i>
+    </div>
+
+    <div class="main">
+
+    
+    <div class="overlay">
+            <h1 class="siteTitle" data-text="Entertainment">Welcome To <span><i class="far fa-hand-rock"></i>
+            </span> Entertainment <span><i class="fas fa-gamepad"></i></span> Zone <span><i class="far fa-hand-rock"></i></span></h1>
+        </div>
+    </div>
+
+    
+    <div class="imge">
+            <image name="slide" width="90%" height="100%" class="imgs"></image>
+    </div>
+
+
+    
+
+
+    <script>
+        const toggleMenu = (index) =>{
+            document.getElementsByClassName('nav-item','nav-item1')[index].classList.toggle('opened');
+            // document.getElementsByClassName('nav-item1')[index].classList.toggle('opened');
+            document.getElementsByClassName('text')[index].classList.toggle('show-text');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/94d8cc078f.js" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+</body>
+</html>

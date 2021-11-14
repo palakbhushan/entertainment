@@ -1,0 +1,182 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif ;
+    box-sizing: border-box;
+    height: 100%;
+    /* overflow:scroll ; */
+}
+
+
+body{
+    background:url('./image/home=back.jpg');
+    margin: 0;
+    padding: 0;
+    height: 90%;
+}
+
+.container{
+    height: 110%;
+    /* margin-top: 5%; */
+    /* padding-top: 20px; */
+}
+
+.imagess
+{
+    
+        /* float: left; */
+        width:  auto;
+        height: 6rem;
+        object-fit: cover;
+    
+        
+}
+.overlay{
+    background: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    height: 13vh;
+    margin-top: 2%;
+    margin-left: 25%;
+
+}
+
+.siteTitle{
+    font-family: cursive;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    font-size: 3.0rem;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    text-shadow: 0 0 30px #ff0055;
+}
+
+.siteTitle i
+{
+    font-size: 3rem;
+}
+
+.siteTitle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -5;
+    background:#ff0055;
+    opacity: 0.4;
+    filter:blur(30px)
+}
+
+
+.row
+{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+    
+    
+}
+
+#b{
+    height:410px;
+    width: 400px;
+}
+
+#c{
+    height:410px;
+    width:380px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#d{
+    height:405px;
+}
+
+#e{
+    height:410px;
+    width: 360px;
+}
+
+#f{
+    height:410px;
+}
+
+#g{
+    height:410px;
+    padding-left: 5px;
+}
+
+#h{
+    height:410px;
+    width: 370px;
+}
+
+#i{
+    height:410px;
+    width: 360px;
+    padding-left: 5px;
+}
+
+#j{
+    height:410px;
+    width: 320px;
+}
+
+#k{
+    height:410px;
+    width: 360px;
+}
+
+#l{
+    height:410px;
+    width: 360px;
+    padding-right: 5px;
+    padding-left:5px ;
+}
+
+#m{
+    height:300px;
+}
+
+#n{
+    height: 300px;
+}
+
+.meme{
+    height:420px;
+    width: 200px;
+    border-radius: 1rem;
+    /* border: rgb(20, 201, 4) solid 1px; */
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.slideImg{
+    height: 55%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:url(./image/SCROLLLL.png); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(41, 40, 40); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: GREEN; 
+  }

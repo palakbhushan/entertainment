@@ -1,0 +1,182 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif ;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./image/home=back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.overlay{
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+
+}
+
+.siteTitle{
+    font-family: cursive;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    font-size: 3.0rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    text-shadow: 0 0 30px #ff0055;
+}
+
+.siteTitle i
+{
+    font-size: 3rem;
+}
+
+.siteTitle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background:#ff0055;
+    opacity: 0.4;
+    filter:blur(30px)
+}
+
+.loginCard{
+    border-radius: 1rem;
+    width:25rem;
+    height: 20rem;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    background:rgba(255, 255, 255, 0.2);
+}
+
+.loginCard::before{
+
+    content:'';
+    border-radius: 1rem;
+    position: absolute;
+    background:rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    filter:blur(1px);
+}
+
+.loginCard::after{
+
+    border-radius: 1rem;
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        filter:blur(50px) hue-rotate(0deg);
+    }
+
+    100%
+    {
+        filter: blur(50px) hue-rotate(360deg);
+    }
+}
+
+.loginCard .input
+{
+    width: 100%;
+    margin-top:1rem;
+    margin-left: 2rem;
+}
+.loginCard .input input{
+
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    outline: none;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 1rem 1rem;
+}
+
+::placeholder{
+    color:rgba(2, 1, 1, 0.8);
+    font-family: cursive;
+}
+
+.loginCard  button
+{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 1rem 0rem;
+    width: 40%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    outline: none;
+    max-width: 150px;
+    background: transparent;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    margin-right: 0.1rem;
+}
+
+
+
+.loginCard button:hover{
+    background: rgba(7, 4, 4, 0.7);
+}
+
+.loginCard p 
+{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 5rem;
+}
+.loginCard p a{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    text-decoration: underline;
+   
+}
+.loginCard .cardtitle
+{
+    margin-top: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color:rgba(255,255,255,0.7); ;
+}
+
+.blk{
+    display: inline;
+}
